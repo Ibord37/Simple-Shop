@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.container {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.6s ease-in-out;
+}
+
+.form-container {
+    width: 100%;
+    height: 70vh;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    border-radius: 12px;
+    padding: 8px 16px;
+    margin-left: 6px;
+    margin-bottom: 8px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+    position: absolute;
+    transition: all 0.6s ease-in-out;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.overlay {
+  background: #4CAF50;
+  color: white;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.sign-in-container {
+  left: 0;
+  z-index: 2;
+}
+
+.sign-up-container {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.account-input {
+    width: 100%;
+    position: relative;
+    margin: 8px 0;
+}
+
+.account-input input {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+}
+
+.register-button {
+    width: 95%;
+}
+
+.register-button button {
+    width: 100%;
+}
