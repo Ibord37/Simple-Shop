@@ -19,6 +19,9 @@ const LoginController = require('./controllers/LoginController');
 const TransactionController = require('./controllers/TransactionController');
 const UserController = require('./controllers/UserController');
 const StockController = require('./controllers/StockController');
+const MailController = require('./controllers/MailController');
+
+const { FormatNumber, HumanizeTimestamp, CapitalizeFront } = require('./utils/Text');
 
 const app = express();
 const client = new Client({
@@ -166,6 +169,16 @@ client.on(Events.InteractionCreate, async interaction => {
 				if (user.discord_balance < transactions.price)
 					return interaction.reply("You don't have enough balance to do that.");
 
+				const title = "Top Up Notification";
+				const content = `**Thanks for trusting our service.**\n
+					**${FormatNumber(transactions.price)} Untitled Coins** has been sent to your account.
+
+					Payment Method: ${CapitalizeFront(transactions.payment)}
+					Paid at: ${HumanizeTimestamp(now)}
+
+					*This is an auto-generated message.*
+				`;
+
 				user.discord_balance -= transactions.price;
 				user.balance += transactions.price;
 
@@ -173,6 +186,8 @@ client.on(Events.InteractionCreate, async interaction => {
 
 				await user.save();
 				await transactions.save();
+
+				await MailController.SendNotification(user.id, title, content);
 
 				return interaction.reply("Payment successful! Thanks for purchasing from us.");
 			}

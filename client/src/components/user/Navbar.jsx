@@ -99,10 +99,12 @@ export default function PageNavbar() {
                                 </a>
                                 <ul className="dropdown-menu dropdown-menu-end">
                                     <li>
-                                        <button className="dropdown-item" onClick={SendLogout}>Log out</button>
+                                        <button className="dropdown-item" onClick={SendLogout}><i className="fas fa-sign-out me-2"></i> Log out</button>
                                     </li>
                                     <li><hr className="dropdown-divider"/></li>
-                                    <li><a className="dropdown-item" href="/profile">Profile</a></li>
+                                    <li><a className="dropdown-item" href="/profile"><i className="fas fa-user me-2"></i> Profile</a></li>
+                                    <li><hr className="dropdown-divider"/></li>
+                                    <li><a className="dropdown-item" href="/mails"><i className="fas fa-envelope me-2"></i> Inbox</a></li>
                                 </ul>
                             </li>
                         </ul>

@@ -199,3 +199,7 @@ td {
 .sidebar-link .collapsed ~ .dashboard {
     margin-left: 80px; 
 }
+
+.text-buttons button.active {
+    color: black;
+}

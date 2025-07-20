@@ -114,7 +114,7 @@ export default function AddStock() {
                                 </div>
                             </div>} */}
                             <div className="input-data mt-2">
-                                <label htmlFor="item_code" className="faw fw-bold">Item Count per Price</label>
+                                <label htmlFor="item_count_pp" className="faw fw-bold">Item Count per Price</label>
                                 <div className="input-group mt-2">
                                     <div className="input-group-prepend">
                                         <span className="input-group-text">

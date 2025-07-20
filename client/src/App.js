@@ -12,7 +12,7 @@ import Register from './components/outsider/Register';
 import Main from './components/admin/Main';
 
 import ProtectRoute from './components/outsider/Protection';
-import MainContent from './components/user/Main';
+import UserMain from './components/user/Main';
 
 import GetUser from './utils/GetUser';
 
@@ -48,7 +48,7 @@ function App() {
           <Route path="/" element={<RedirectUser/>}></Route>
           <Route path='/*' element={
             <ProtectRoute role_id={0}>
-              <MainContent />
+              <UserMain />
             </ProtectRoute>
           } />
           <Route path='/admin/*' element={

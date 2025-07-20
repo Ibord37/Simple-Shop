@@ -111,6 +111,10 @@ export function Sidebar() {
                         <i className="fas fa-history me-3"></i>
                         <span className="hide-on-collapse">User Logs</span>
                     </NavLink>
+                    <NavLink to="/admin/send-mail" className={({ isActive }) => "sidebar-link" + (isActive ? " active" : "") + " text-decoration-none p-3"}>
+                        <i className="fas fa-envelope me-3"></i>
+                        <span className="hide-on-collapse">Mail Sender</span>
+                    </NavLink>
                     <NavLink to="/landing" className={({ isActive }) => "sidebar-link" + (isActive ? " active" : "") + " text-decoration-none p-3"}>
                         <i className="fas fa-user me-3"></i>
                         <span className="hide-on-collapse">User Page</span>

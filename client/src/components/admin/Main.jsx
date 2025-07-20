@@ -13,6 +13,7 @@ import Dashboard from './Dashboard';
 import Logs from './Logs';
 import Stocks from './Stocks';
 import Transactions from './Transactions';
+import MailSender from './MailSender'; 
 
 function MainContent() {
   const { collapsed } = useSidebar();
@@ -28,6 +29,7 @@ function MainContent() {
             <Route path="stocks" element={<Stocks />} />
             <Route path="addstock" element={<AddStock />} />
             <Route path="transactions" element={<Transactions />} />
+            <Route path="send-mail" element={<MailSender />} />
             <Route path="logs" element={<Logs />} />
           </Routes>
         </div>

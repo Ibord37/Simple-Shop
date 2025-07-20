@@ -11,6 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      users.belongsToMany(models.Mail, {
+        through: models.user_mail,
+        foreignKey: 'user_id',
+        otherKey: 'mail_id'
+      });
     }
   }
   users.init({
