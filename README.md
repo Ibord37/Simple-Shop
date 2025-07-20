@@ -30,3 +30,5 @@ Description: I don't know xD, but let's say it as a simple voucher shop project.
 - [x] Interface for Admin Panel (including: Dashboard, Stocks Manager, Transactions, and User Logs)
 - [x] Interface for User (including Landing Page, Shop, Profile, My Inventory, My Transactions, Cart, and Topup)
 - [x] Discord Bot as simulation of third-party payment method and registration method
+- [x] Basic Mailing System (User can only receive Mail, while admin can send Mail (mass / broadcast and normal one)
+- [x] Basic Markup Support for Mail Render (Bold Italic, Italic, Bold, Underline)
