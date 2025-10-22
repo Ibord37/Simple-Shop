@@ -1,4 +1,4 @@
-# Untitled Project
+# Simple Shop
 Description: I don't know xD, but let's say it as a simple voucher shop project.
 
 # Base
