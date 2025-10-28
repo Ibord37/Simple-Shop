@@ -1,5 +1,5 @@
 # Simple Shop
-Description: I don't know xD, but let's say it as a simple voucher shop project.
+Description: I don't know xD, but let's say it as a simple voucher shop project. This project would be refactored soon.
 
 # Base
 - For backend, it is based on [Node.js](https://nodejs.org/en).
@@ -26,6 +26,7 @@ Description: I don't know xD, but let's say it as a simple voucher shop project.
 - [x] Register Account
 - [x] Login (+ jsonwebtoken)
 - [ ] Refresh Token
+- [ ] Mobile Friendly
 - [x] Logout
 - [x] Interface for Admin Panel (including: Dashboard, Stocks Manager, Transactions, and User Logs)
 - [x] Interface for User (including Landing Page, Shop, Profile, My Inventory, My Transactions, Cart, and Topup)
